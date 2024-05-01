@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head >
+    <title>案例練習1 - 產品介紹頁 - Doris' HTML 課程</title>
+    <meta charset="utf-8">
+    <style>
+      ul {
+        display: inline-flex;
+        list-style-type: none;
+        justify-content: flex-end; /* 從右往左排列 */
+      }
+      ul li {
+        padding: 0 10px;
+        font-size: 20px;
+      }
+      #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #ccc; /* 加入底部邊框來分隔區塊 */
+        
+      }
+      #container {
+        max-width: 1200px;
+        margin:auto;
+      }
+      #main-container {
+        display: flex;
+      }
+      #main-container > div{
+        width: 50%;
+      }
+      
+      .nav-link{
+       color: blue;
+       font-weight: bold;
+        
+      }
+      .card{
+        
+        box-shadow:1px 1px 5px 2px #b9f;
+        padding: 15px;
+        border-radius:15px;
+        margin-top: 20px;
+      }
+      .card img{
+        width:100%;
+        border-radius:15px;
+        aspect-ratio:1;
+        object-fit:cover;
+        object-position:center;
+
+      }
+      .card h2{
+        color: #31241e;
+        font-size: 30px;
+      }
+      .card p{
+        color: black;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      .card a{
+        color: #31241e;
+        text-decoration: none;
+
+      }
+      .button-link{
+        display: inline-block;
+        background-color: pink;
+        border-radius: 10px;
+        font-size: 30px;
+        border: none;
+        font-weight: bold;
+        padding: 15px 15px;
+        color: black;
+      }
+      body {
+/*        background: #edcfbb;
+        background-color: #ecf1af;*/
+        max-width: 1200px;
+        margin: auto;
+      }
+      #back-to-top {
+      display: none; /* 初始設定為隱藏 */
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: gray;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    
+      
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <img width="150px" src="./img/logo.PNG" alt="logo">
+
+        <span style="font-size: 50px; color: #424242; font-family: Verdana;">QiaoQiao</span>
+
+        <ul style="">
+          <li class="nav-link"><a href="./index.html">首頁</a></li>
+          <li class="nav-link"><a href="./cost.html">價目表</a></li>
+          <li class="nav-link"><a href="#">關於我們</a></li>
+          <li class="nav-link"><a href="#">常見問題</a></li>
+          <li class="nav-link"><a href="./beauty2.html">預約表單</a></li>
+        </ul>
+        <div style="border-bottom: #424242;"></div>
+      </div>
+      <div id="main-container">
+        <div class="card">
+          <div class="img-box">
+            <img src="https://images.unsplash.com/photo-1592150311591-d668da8095f0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQzfFM0TUtMQXNCQjc0fHxlbnwwfHx8fHw%3D" alt="">
+          </div>
+          <div class="text-box">
+            <h2>使用品牌</h2>
+            <p>fineface台灣顏怡
+              紋綉專用高品質色乳
+              <p>
+              操作手法:
+              儀器精修，手工輔助
+            </p>
+              </p>
+              <a class="button-link" href="./beauty2.html">我要預約</a>
+              
+          </div>
+        </div>
+      
+        <div>
+          <img width="100%" src="./img/a.png">
+        </div>
+      </div>
+    </div>
+    <button id="back-to-top">TOP</button>
+
+    <script>
+      const backToTopBtn = document.getElementById('back-to-top');
+  
+      window.addEventListener('scroll', () => {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          backToTopBtn.style.display = 'block';
+        } else {
+          backToTopBtn.style.display = 'none';
+        }
+      });
+  
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth' // 平滑滾動效果
+        });
+      });
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   
+    
+  </body>
+</html>
